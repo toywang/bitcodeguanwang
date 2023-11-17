@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="https://app.tiansoin.cc/Public/Mobile/css/bootstrap.min.css" />
+	    <link rel="stylesheet" href="https://app.tiansoin.cc/Public/Mobile/css/bootstrap-icons.css" />
+	    <link rel="stylesheet" href="https://app.tiansoin.cc/Public/Mobile/css/base.css">
+        <title>ログイン</title>
+    </head>
+<body>
+    <div class="header">
+        <div class="header_l fl">
+            <div class="fl logobox">
+                <img src="https://app.tiansoin.cc/Public/Mobile/images/logo.png" style="height: 28px;"/>
+            </div>
+            <div class="fl clockbox">
+                <div class="clockbox_m">
+                    <div class="clock_empty"></div>
+                    <div class="clock_top">
+                        <div class="clockimg">
+                            <img src="https://app.tiansoin.cc/Public/Mobile/images/clock.png" style="height:14px;display:inline-block;"/>
+                        </div>
+                        <div class="clock_m">
+                            <span  class="clock_m_font" id="timebox"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="clock_d">
+                    <span class="clock_date" id="datebox"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header_r fr">
+            <div class="fl flagbox" id="show_lang">
+                <div class="fl flagbox_l">
+                                        <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_05.png" class="flagimg" />
+                                    </div>
+                <div class="fr flagbox_r">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/downicon.png" class="flag_dcoin" />
+                </div>
+            </div>
+            <div class="fr header_optionbox">
+                <div class="header_list" id="munebtn">
+                    <i class="bi bi-list fw26"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="content">
+        <div class="emptybox"></div>
+        <div class="content_box">
+            <div class="content_head">
+                <div class="content_head_em"></div>
+                <div class="content_title_t">
+                    <span class="title_big">ログイン</span>
+                </div>
+                <div class="content_title_d">
+                    <span class="title_small">ログインしてください</span>
+                </div>
+            </div>
+            <div class="form_box">
+                <div class="input_box" style="margin-bottom:20px;">
+                    <p class="fh14">メールボックス</p>
+                    <div class="inputdiv">
+                        <div class="fl mcoinbox">
+                            <img src="https://app.tiansoin.cc/Public/Mobile/images/Vector.png" style="height: 14px;"/>
+                        </div>
+                        <div class="fr textbox">
+                            <input type="text" class="inputstyle" id="username" placeholder="Ex：abc@example.com" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input_box">
+                    <p class="fh14">ログインパスワード</p>
+                    <div class="inputdiv">
+                        <div class="fl mcoinbox">
+                            <img src="https://app.tiansoin.cc/Public/Mobile/images/Group.png" style="height: 14px;"/>
+                        </div>
+                        <div class="fr textbox">
+                            <input type="password" class="inputstyle" id="password" placeholder="********" />
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="width:100%;height:40px;line-height:40px;">
+                    <a href="https://app.tiansoin.cc/Login/forgotpwd.html" class="commonly_a">パスワードをお忘れの方?</a>
+                </div>
+                
+                <div class="input_box" style="margin-top:30px;">
+                    <div class="inputdiv commonly_btn" id="LoginBtn">
+                        <span class="btn_font">ログイン</span>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div style="width:100%;height:60px;"></div>
+            <div style="width:100%;height:40px;line-height:40px;text-align:center;">
+                <span>アカウントなし?</span>
+                <a href="https://app.tiansoin.cc/Login/register.html" class="commonly_a">登録</a>
+            </div>
+            
+        </div>
+    </div>
+    
+<div class="dongboxc" id="errorbox" style="display:none;">
+    <div class="public_error">
+        <div class="tc error_icon_box">
+            <i class="bi bi-x-circle-fill error_icon"></i>
+        </div>
+        <div class="tc error_txt_box">
+            <span id="error_txt" class="font14 fcbk"></span>
+        </div>
+        <div class="error_btn_box">
+            <div class="tc error_btn" id="close_error">
+                <span class="font14 fcff">決定</span>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+<!--------------Lang----------------->
+<div class="dongbox" id="lang_box">
+    <div class="fl clase_lang_box" style="width:55%;height:100vh;"></div>
+    <div class="fl" style="width:40%;height:100vh;">
+        <div style="width:100%;height:60px;"></div>
+        <div class="lang_list" style="height: 320px;">
+            <div class="lang_list_li" onclick="lang_en()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_01.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">English</span>
+                </div>
+            </div>
+
+            <div class="lang_list_li"  onclick="lang_cn()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_02.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">中文简体</span>
+                </div>
+            </div>
+
+            <div class="lang_list_li" onclick="lang_ru()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_03.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">Indonesia</span>
+                </div>
+            </div>
+            
+            <div class="lang_list_li" onclick="lang_pt()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_04.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">Việt Nam</span>
+                </div>
+            </div>
+            
+            <div class="lang_list_li" onclick="lang_kr()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_06.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">한국인</span>
+                </div>
+            </div>
+            
+            <div class="lang_list_li" onclick="lang_es()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_05.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">日本語</span>
+                </div>
+            </div>
+            
+            <div class="lang_list_li" onclick="lang_rr()">
+                <div class="fl lang_list_li_flag">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/flag_coin_07.png" style="height:30px;"/>
+                </div>
+                <div class="fl lang_list_li_wd">
+                    <span class="lang_list_word">Русский язык</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="fl clase_lang_box" style="width:10%;height:100vh;"></div>
+</div>
+
+<!--------------mune----------------->
+<div class="dongbox" id="right_option">
+    <div class="fl cloes_mune" style="width:55%;height:100vh;"></div>
+    <div class="fl mune_box">
+        <div class="mune_box_header">
+            <div class="tr mune_box_cloes cloes_mune">
+                <img src="https://app.tiansoin.cc/Public/Mobile/images/icon_3_20.png" style="height:12px;"/>
+            </div>
+            <div class="mune_box_header_img">
+                                <i class="bi bi-person-circle" style="color: #c9c9c9;font-size:48px;"></i>
+                            </div>
+            <div class="tr mune_box_header_uname">
+                                <span class="mune_box_name">未登录</span>
+                            </div>
+        </div>
+        
+        <div class="mune_content_list">
+            
+            
+            <a href="https://app.tiansoin.cc/Index/index.html">
+            <div class="mune_content_list_li" >公式サイト</div>
+            </a>
+            
+            <a href="https://app.tiansoin.cc/Index/index.html">
+            <div class="mune_content_list_li" style="background:#c1ced7;font-weight:bold;">ダッシュボード</div>
+            </a>
+
+            <a href="https://app.tiansoin.cc/Other/problem_faq.html">
+            <div class="mune_content_list_li" >FAQ</div>
+            </a>
+            
+            <a href="https://app.tiansoin.cc/Other/blog.html">
+            <div class="mune_content_list_li" >BLOG</div>
+            </a>
+            
+            <a href="https://app.tiansoin.cc/Other/aboutus.html">
+            <div class="mune_content_list_li" >会社概要</div>
+            </a>
+        </div>
+        
+        <div class="mune_content_btnbox">
+            <div class="mune_content_email">
+                <div class="fl mune_content_email_icon">
+                    <img src="https://app.tiansoin.cc/Public/Mobile/images/icon_3_19.png" style="height:18px;"/>
+                </div>
+                <div class="fr mune_content_email_us">
+                    <span class="fh14">連絡。</span>
+                </div>
+            </div>
+            <div class="mune_content_email_account">
+                <span class="fh12">support@tiansoin.cc</span>
+            </div>
+            
+            <div class="mune_content_btn_list">
+                
+                <a href="https://t.me/TiansoinGlobal" target="__blank">
+                <div class="mune_content_btn_group">
+                    <div class="fl mune_content_btn_l">
+                        <img src="https://app.tiansoin.cc/Public/Mobile/images/icon_3_21.png" style="height:24px;"/>
+                    </div>
+                    <div class="fr mune_content_btn_r">
+                        <span style="font-size:14px;color:#fff;">グループ</span>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="https://x8l3w.channel.io" target="__blank">
+                <div class="mune_content_btn_all">
+                    <div class="fl mune_content_btn_l">
+                        <img src="https://app.tiansoin.cc/Public/Mobile/images/icon_3_21.png" style="height:24px;"/>
+                    </div>
+                    <div class="fr mune_content_btn_r">
+                        <span style="font-size:14px;color:#fff;">秘書</span>
+                    </div>
+                </div>
+                </a>
+                
+                <a href="https://twitter.com" target="__blank">
+                <div class="mune_content_btn_all">
+                    <div class="fl mune_content_btn_l">
+                        <img src="https://app.tiansoin.cc/Public/Mobile/images/icon_3_22.png" style="height:24px;"/>
+                    </div>
+                    <div class="fr  mune_content_btn_r">
+                        <span style="font-size:14px;color:#fff;">フォローする</span>
+                    </div>
+                </div>
+                </a>
+                
+                <div class="mune_loginout_btn" id="LoginOut">
+                    退会                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+      
+<script type="text/javascript" src="https://app.tiansoin.cc/Public/Mobile/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://app.tiansoin.cc/Public/Mobile/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://app.tiansoin.cc/Public/layer/layer.js"></script>
+<script type="text/javascript">
+    $(function(){
+        get_date_time();
+        setInterval("get_date_time()",10000);
+        $("#show_lang").click(function(){
+            $("#lang_box").show();
+        });
+        $(".clase_lang_box").click(function(){
+            $("#lang_box").hide();
+        });
+    });
+    
+    $("#close_error").click(function(){
+        $("#errorbox").hide();
+     });
+    $("#munebtn").click(function(){
+        $("#right_option").fadeIn("slow");
+    });
+    $(".cloes_mune").click(function(){
+        $("#right_option").fadeOut("slow");
+    });
+    function lang_en(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/en-us.html";
+    }
+    function lang_cn(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/zh-cn.html";
+    }
+    function lang_ru(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/ru-ru.html";
+    }
+    function lang_pt(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/pt-pt.html";
+    }
+    function lang_es(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/es-es.html";
+    }
+    
+    function lang_kr(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/ko-kr.html";
+    }
+    
+    function lang_rr(){
+        $("#lang_box").hide();
+        window.location.href = "/Login/index/LANG/ru-rr.html";
+    }
+
+    function SmllSuccess(text){
+        var html = '';
+        html += '<div class="dongboxc" id="successbox" style="display:block;">'+
+                '<div class="small_success">'+
+                '<div class="tc error_icon_box">'+
+                '<i class="bi bi-check-circle-fill success_icon"></i>'+
+                '</div>'+
+                '<div class="tc error_txt_box">'+
+                '<span id="error_txt" class="font14 fcbk">' + text + '</span>'+
+                '</div>'+
+                '</div>'+
+                '</div>';
+        $(".content").append(html);              
+    }
+
+    $("#LoginBtn").click(function(){
+        var myreg = /^([\.a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+        var username = $("#username").val();
+        if(username == ''){
+            layer.msg("正しいメールアカウントを入力してください");return false;
+        }
+        if(!myreg.test(username)){
+            layer.msg("正しいメールアカウントを入力してください");return false;
+        }
+        var password = $("#password").val();
+        if(password == '' || password == null){
+            layer.msg("请输入您的登录密码");return false;
+        }
+        $.post("/Login/index.html",{'username':username,'password':password},function(data){
+            if(data.code == 1){
+                SmllSuccess(data.info);
+                setTimeout(function(args){
+                    window.location.href = "/Index/index.html";
+                },2000);
+            }else{
+                $("#error_txt").html(data.info);
+                $("#errorbox").show();
+            }
+        });
+    });
+    function getNow(s) {
+        return s < 10 ? '0' + s : s;
+    }
+    function get_date_time(){
+       var myDate = new Date;
+        var year = myDate.getFullYear(); 
+        var mon = myDate.getMonth() + 1;
+        var date = myDate.getDate();
+        var hour = myDate.getHours();
+        var min = myDate.getMinutes();
+        $("#datebox").html(year+"-"+getNow(mon)+"-"+getNow(date));
+        $("#timebox").html(getNow(hour)+":"+getNow(min));
+    }
+</script>
+</body>
+</html>

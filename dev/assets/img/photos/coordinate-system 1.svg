@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M49.9999 25L79.1666 41.6667V75L49.9999 91.6667L20.8333 75V41.6667L49.9999 25Z" fill="#3E95FD" stroke="#333333" stroke-width="2" stroke-linejoin="bevel"/>
+<path d="M50 12.5V25" stroke="#333333" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M20.8333 41.6667L49.9999 58.3334L79.1666 41.6667" stroke="#333333" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M79.1667 75L91.6667 81.25" stroke="#333333" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M8.33325 81.25L20.8333 75" stroke="#333333" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M50 58.3333V91.6666" stroke="#333333" stroke-width="2" stroke-linecap="square" stroke-linejoin="bevel"/>
+<path d="M64.5833 33.3333L79.1666 41.6666V58.3333M35.4166 33.3333L20.8333 41.6666V58.3333M35.4166 83.3333L49.9999 91.6666L64.5833 83.3333" stroke="#333333" stroke-width="2" stroke-linejoin="bevel"/>
+</svg>
