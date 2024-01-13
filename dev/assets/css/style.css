@@ -10,6 +10,8 @@ Author:		elemis
   border: 0;
   content: "\e902";
 }
+
+
 .caret-simple .dropdown-toggle::after {
   font-family: "Unicons";
   display: inline-block;

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/*!
+Theme Name: Sandbox - Modern & Multipurpose Bootstrap 5 Template
+Theme URI:	https://sandbox.elemisthemes.com/
+Version:	3.1.0
+Author:		elemis
+*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700");
+
+.logo-div {
+  display: flex;
+  align-items: center;
+}
+/*实现文字颜色从红到黄的线性渐变效果*/
+.gradient-text {
+  font-style: italic;
+  font-size: 30px;
+  background: linear-gradient(
+    to right,
+    #24a8c3,
+    #106acc
+  ); /*设置渐变的方向从左到右 颜色从ff0000到ffff00*/
+  -webkit-background-clip: text; /*将设置的背景颜色限制在文字中*/
+  -webkit-text-fill-color: transparent; /*给文字设置成透明*/
+}
